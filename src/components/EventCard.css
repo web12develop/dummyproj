@@ -1,0 +1,23 @@
+/* src/components/EventCard.css */
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .event-card h2 {
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  .event-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .event-card p strong {
+    color: #333;
+  }
+  

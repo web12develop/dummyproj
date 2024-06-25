@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Events from './pages/Events';
+import MyEvents from './pages/MyEvents';
+import News from './pages/News';
+import Volunteer from './pages/Volunteer';
+import Profile from './pages/Profile';
 import './App.css';
+import './pages/Events.css'; // Import Events.css
+import './pages/MyEvents.css'; // Import MyEvents.css
 
-function App() {
+const App = () => {
+  const [events, setEvents] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events setEvents={setEvents} />} />
+        <Route path="/my-events" element={<MyEvents events={events} />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/profile/*" element={<Profile />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

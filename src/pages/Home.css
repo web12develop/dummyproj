@@ -1,0 +1,17 @@
+/* src/pages/Home.css */
+.home {
+    text-align: center;
+  }
+  
+  .home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .home p {
+    font-size: 1.2em;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+  
